@@ -109,6 +109,21 @@ class Concept(BaseModel):
             return [value]
         return value
 
+    @field_validator("tags", mode="before")
+    @classmethod
+    def _normalize_tags(cls, value: Any) -> Any:
+        """Tolerate a comma-separated string in place of a YAML list.
+
+        The SPEC (§4.1) defines `tags` as a YAML list, but real
+        agent-produced bundles (observed in Google's own OKF sample
+        bundles) sometimes emit it as a single comma-separated string
+        instead. Rejecting the whole concept over this would violate the
+        format's own permissive-consumer philosophy (SPEC §11).
+        """
+        if isinstance(value, str):
+            return [tag.strip() for tag in value.split(",") if tag.strip()]
+        return value
+
 
 class IndexEntry(BaseModel):
     """A single bullet entry in an `index.md` section (SPEC §8)."""

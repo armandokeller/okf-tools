@@ -160,6 +160,13 @@ sources:
     assert [s.resource for s in concept.sources] == ["https://example.com/real-source"]
 
 
+def test_parse_concept_tags_as_comma_separated_string() -> None:
+    """Observed in Google's own OKF sample bundles (stackoverflow): tags as a plain string."""
+    text = "---\ntype: Note\ntags: stackoverflow, posts, questions\n---\nbody\n"
+    concept = parse_concept("x", text)
+    assert concept.tags == ["stackoverflow", "posts", "questions"]
+
+
 def test_parse_concept_preserves_unknown_extra_keys() -> None:
     text = "---\ntype: Note\ncustom_field: 42\n---\nbody\n"
     concept = parse_concept("x", text)
