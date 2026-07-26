@@ -28,9 +28,9 @@ https://github.com/armandokeller/okf-tools/issues/1). Not a bug in
 `okf_tools.integrations.adk` — a plain (tool-less) call through the same
 stack works fine, and the wiring tests in
 `tests/test_adk_integration.py` cover `get_adk_tools()` directly without
-going through ADK/LiteLLM. See `docs/planning/07-adk-integration.md` for
-the full writeup; if your local server or model isn't Gemma-4-named,
-this script should work unmodified.
+going through ADK/LiteLLM. See the linked issues for the full writeup;
+if your local server or model isn't Gemma-4-named, this script should
+work unmodified.
 """
 
 from __future__ import annotations
