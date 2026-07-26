@@ -17,17 +17,20 @@ Configure via environment variables (defaults match LM Studio's defaults):
     OKF_LOCAL_MODEL_NAME       default: google/gemma-4-e4b
     OKF_LOCAL_MODEL_API_KEY    default: "not-needed" (most local servers ignore it)
 
-Known issue: as of google-adk 2.5.0 / litellm 1.93.0, sending ANY tool
-declaration through this path can trip up LM Studio's OpenAI-compatible
-endpoint — reproduced with a single trivial tool against two different
-local models (one raised `litellm.BadRequestError: Invalid 'content'`,
-the other returned a non-answer). This reproduces with a minimal tool
-unrelated to okf-tools' own schemas, so it looks like an ADK+LiteLLM
-request-shape incompatibility with LM Studio's server, not a bug in
-`okf_tools.integrations.adk`. A plain (tool-less) call through the same
-stack works fine. See `docs/planning/07-adk-integration.md` for details;
-if your local server handles ADK's tool-calling requests better, this
-script should still work unmodified.
+Known issue: as of google-adk 2.5.0 / litellm 1.93.0, ADK's LiteLLM
+integration hardcodes `role="tool_responses"` for any model whose name
+matches `gemma-?4` (meant for Ollama/vLLM/llama.cpp), but LM Studio's
+OpenAI-compatible endpoint validates roles strictly and rejects that
+value outright, breaking the very first tool-result turn. Root-caused
+and reported upstream: https://github.com/google/adk-python/issues/6482
+(tracked on our side at
+https://github.com/armandokeller/okf-tools/issues/1). Not a bug in
+`okf_tools.integrations.adk` — a plain (tool-less) call through the same
+stack works fine, and the wiring tests in
+`tests/test_adk_integration.py` cover `get_adk_tools()` directly without
+going through ADK/LiteLLM. See `docs/planning/07-adk-integration.md` for
+the full writeup; if your local server or model isn't Gemma-4-named,
+this script should work unmodified.
 """
 
 from __future__ import annotations
