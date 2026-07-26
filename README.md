@@ -2,11 +2,14 @@
 
 [![CI](https://github.com/armandokeller/okf-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/armandokeller/okf-tools/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/okf-tools.svg)](https://pypi.org/project/okf-tools/)
+[![Docs](https://readthedocs.org/projects/okf-tools/badge/?version=latest)](https://okf-tools.readthedocs.io/en/latest/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Tools to query and consume [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf)
 data catalogs — usable as plain standalone Python functions, or wired into
 AI agent frameworks (LangChain, PydanticAI, Google ADK).
+
+📖 Full documentation, including the complete API reference: **[okf-tools.readthedocs.io](https://okf-tools.readthedocs.io/)**
 
 ## What is OKF?
 

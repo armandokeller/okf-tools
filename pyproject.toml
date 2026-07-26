@@ -12,10 +12,12 @@ dependencies = ["pydantic>=2", "pyyaml>=6"]
 langchain = ["langchain-core>=1.0"]
 pydantic-ai = ["pydantic-ai-slim>=2.0"]
 adk = ["google-adk>=2.0"]
+docs = ["mkdocs>=1.6", "mkdocs-material>=9.5", "mkdocstrings[python]>=0.26"]
 
 [project.urls]
 Homepage = "https://github.com/armandokeller/okf-tools"
 Repository = "https://github.com/armandokeller/okf-tools"
+Documentation = "https://okf-tools.readthedocs.io/"
 
 [build-system]
 requires = ["hatchling"]
@@ -37,6 +39,9 @@ dev = [
     "langchain-openai>=1.0",
     "pydantic-ai-slim[openai]>=2.0",
     "google-adk>=2.0",
+    "mkdocs>=1.6",
+    "mkdocs-material>=9.5",
+    "mkdocstrings[python]>=0.26",
 ]
 
 [tool.pytest.ini_options]

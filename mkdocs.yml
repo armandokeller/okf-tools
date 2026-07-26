@@ -1,0 +1,71 @@
+site_name: okf-tools
+site_description: >-
+  Tools to query and consume Open Knowledge Format (OKF) data catalogs,
+  usable standalone or wired into AI agent frameworks.
+site_url: https://okf-tools.readthedocs.io/
+repo_url: https://github.com/armandokeller/okf-tools
+repo_name: armandokeller/okf-tools
+
+# docs/planning/ is local-only project-management notes (gitignored,
+# never committed) — excluded here as defense-in-depth so a local build
+# (where those files still exist on disk) can never leak them into the
+# built site, even though a clean checkout (what Read the Docs builds
+# from) would never have them in the first place.
+exclude_docs: |
+  planning/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - API Reference:
+      - Public API: api/public-api.md
+      - Models: api/models.md
+      - Bundle: api/bundle.md
+      - Catalog: api/catalog.md
+      - Graph: api/graph.md
+      - Queries: api/queries.md
+      - Parsing helpers: api/parsing.md
+      - LangChain integration: api/langchain.md
+      - PydanticAI integration: api/pydantic-ai.md
+      - Google ADK integration: api/adk.md
+  - Contributing: contributing.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_source: false
+            merge_init_into_class: true
+            show_root_heading: true
+            heading_level: 2
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - toc:
+      permalink: true
