@@ -20,6 +20,7 @@ Run:
 from __future__ import annotations
 
 import os
+import sys
 from pathlib import Path
 
 from langchain.agents import create_agent
@@ -36,6 +37,10 @@ API_KEY = os.environ.get("OKF_LOCAL_MODEL_API_KEY", "not-needed")
 
 
 def main() -> None:
+    # Local models sometimes emit emoji; make sure the terminal can print them
+    # regardless of the platform's default stdout encoding (notably Windows).
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     catalog = Catalog()
     catalog.register("demo", EXAMPLE_BUNDLE)
     catalog.load_all()
