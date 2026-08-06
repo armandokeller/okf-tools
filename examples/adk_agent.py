@@ -1,7 +1,7 @@
 """Demonstrates wiring okf-tools into a Google ADK agent.
 
 `google-adk` is a dev-only dependency of this repository (used to run
-this example) — it is NOT part of the `okf-tools[adk]` extra beyond the
+this example) — it is NOT part of the `okf-agent-tools[adk]` extra beyond the
 bare `google-adk` package itself, which is all `okf_tools.integrations.adk`
 needs for the `FunctionTool` primitive.
 

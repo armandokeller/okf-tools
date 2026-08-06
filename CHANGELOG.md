@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.0] - 2026-07-26
 
+Published on PyPI as `okf-agent-tools` (the name `okf-tools` was blocked
+by PyPI's similarity check against an unrelated existing project). The
+importable module is unaffected: `import okf_tools`.
+
 ### Added
 
 - Core OKF v0.2 parser (`okf_tools.models`, `okf_tools.parsing`,
@@ -26,11 +30,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `get_section` — pydantic in/out, usable standalone with no agent
   framework installed.
 - LangChain adapter (`okf_tools.integrations.langchain`,
-  `okf-tools[langchain]` extra).
+  `okf-agent-tools[langchain]` extra).
 - PydanticAI adapter (`okf_tools.integrations.pydantic_ai`,
-  `okf-tools[pydantic-ai]` extra).
-- Google ADK adapter (`okf_tools.integrations.adk`, `okf-tools[adk]`
-  extra).
+  `okf-agent-tools[pydantic-ai]` extra).
+- Google ADK adapter (`okf_tools.integrations.adk`,
+  `okf-agent-tools[adk]` extra).
 - Example scripts for standalone usage and each framework, including
   local-model variants for any OpenAI-compatible server (LM Studio,
   Ollama, vLLM, ...).

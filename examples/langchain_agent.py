@@ -2,7 +2,7 @@
 
 `langchain` and `langchain-anthropic` are dev-only dependencies of this
 repository (used to run this example) — they are NOT part of the
-`okf-tools[langchain]` extra, which only needs `langchain-core` for the
+`okf-agent-tools[langchain]` extra, which only needs `langchain-core` for the
 `Tool` primitive `okf_tools.integrations.langchain` wraps.
 
 Run from the repository root:

@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/okf-tools
+      url: https://test.pypi.org/p/okf-agent-tools
     permissions:
       id-token: write
     steps:
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/okf-tools
+      url: https://pypi.org/p/okf-agent-tools
     permissions:
       id-token: write
     steps:

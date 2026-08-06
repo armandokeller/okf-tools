@@ -8,7 +8,7 @@ Configure via environment variables (defaults match LM Studio's defaults):
     OKF_LOCAL_MODEL_API_KEY    default: "not-needed" (most local servers ignore it)
 
 `langchain-openai` is a dev-only dependency of this repository (used to
-run this example) — it is NOT part of the `okf-tools[langchain]` extra,
+run this example) — it is NOT part of the `okf-agent-tools[langchain]` extra,
 since the choice of a local vs. hosted OpenAI-compatible client is an
 application decision, not something the library should assume.
 

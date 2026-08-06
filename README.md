@@ -1,7 +1,7 @@
 # okf-tools
 
 [![CI](https://github.com/armandokeller/okf-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/armandokeller/okf-tools/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/okf-tools.svg)](https://pypi.org/project/okf-tools/)
+[![PyPI](https://img.shields.io/pypi/v/okf-agent-tools.svg)](https://pypi.org/project/okf-agent-tools/)
 [![Docs](https://readthedocs.org/projects/okf-tools/badge/?version=latest)](https://okf-tools.readthedocs.io/en/latest/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -37,13 +37,15 @@ pip install git+https://github.com/armandokeller/okf-tools
 ```
 
 Once released, the base package will have no agent-framework
-dependencies — add only the framework(s) you use:
+dependencies — add only the framework(s) you use. The PyPI distribution
+is named `okf-agent-tools` (`okf-tools` was taken by an unrelated,
+similarly-named project), but the importable module stays `okf_tools`:
 
 ```bash
-pip install okf-tools                 # standalone use only
-pip install okf-tools[langchain]      # + LangChain tools
-pip install okf-tools[pydantic-ai]    # + PydanticAI tools
-pip install okf-tools[adk]            # + Google ADK tools
+pip install okf-agent-tools                 # standalone use only
+pip install okf-agent-tools[langchain]      # + LangChain tools
+pip install okf-agent-tools[pydantic-ai]    # + PydanticAI tools
+pip install okf-agent-tools[adk]            # + Google ADK tools
 ```
 
 ## Quickstart: standalone

@@ -1509,7 +1509,7 @@ wheels = [
 ]
 
 [[package]]
-name = "okf-tools"
+name = "okf-agent-tools"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

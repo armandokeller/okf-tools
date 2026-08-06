@@ -9,7 +9,7 @@ Configure via environment variables (defaults match LM Studio's defaults):
 
 `pydantic-ai-slim[openai]` is a dev-only dependency of this repository
 (used to run this example) — it is NOT part of the
-`okf-tools[pydantic-ai]` extra, since the choice of a local vs. hosted
+`okf-agent-tools[pydantic-ai]` extra, since the choice of a local vs. hosted
 OpenAI-compatible client is an application decision, not something the
 library should assume.
 

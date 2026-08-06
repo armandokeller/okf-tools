@@ -1,5 +1,5 @@
 [project]
-name = "okf-tools"
+name = "okf-agent-tools"
 version = "0.1.0"
 description = "Tools to query and consume Open Knowledge Format (OKF) data catalogs, usable standalone or integrated with AI agent frameworks."
 readme = "README.md"

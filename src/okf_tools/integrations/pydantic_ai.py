@@ -1,8 +1,8 @@
 """PydanticAI adapter: exposes `okf_tools.api` functions as PydanticAI tools.
 
-Requires the `pydantic-ai` extra (`pip install okf-tools[pydantic-ai]`);
+Requires the `pydantic-ai` extra (`pip install okf-agent-tools[pydantic-ai]`);
 this module is not imported anywhere in the base package, so installing
-okf-tools without the extra never pulls in `pydantic_ai`.
+okf-agent-tools without the extra never pulls in `pydantic_ai`.
 """
 
 from __future__ import annotations

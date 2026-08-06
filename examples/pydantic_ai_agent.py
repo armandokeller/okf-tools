@@ -2,7 +2,7 @@
 
 `pydantic-ai-slim[openai]` is a dev-only dependency of this repository
 (used to run this example) — it is NOT part of the
-`okf-tools[pydantic-ai]` extra, which only needs bare `pydantic-ai-slim`
+`okf-agent-tools[pydantic-ai]` extra, which only needs bare `pydantic-ai-slim`
 for the `Tool` primitive `okf_tools.integrations.pydantic_ai` wraps.
 Bring whichever provider extra (`openai`, `anthropic`, `google`, ...)
 matches the model you want to run against.

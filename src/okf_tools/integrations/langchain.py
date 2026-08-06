@@ -1,8 +1,8 @@
 """LangChain adapter: exposes `okf_tools.api` functions as LangChain tools.
 
-Requires the `langchain` extra (`pip install okf-tools[langchain]`); this
-module is not imported anywhere in the base package, so installing
-okf-tools without the extra never pulls in `langchain-core`.
+Requires the `langchain` extra (`pip install okf-agent-tools[langchain]`);
+this module is not imported anywhere in the base package, so installing
+okf-agent-tools without the extra never pulls in `langchain-core`.
 """
 
 from __future__ import annotations

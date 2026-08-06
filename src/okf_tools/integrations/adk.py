@@ -1,8 +1,8 @@
 """Google ADK adapter: exposes `okf_tools.api` functions as ADK function tools.
 
-Requires the `adk` extra (`pip install okf-tools[adk]`); this module is
-not imported anywhere in the base package, so installing okf-tools
-without the extra never pulls in `google.adk`.
+Requires the `adk` extra (`pip install okf-agent-tools[adk]`); this
+module is not imported anywhere in the base package, so installing
+okf-agent-tools without the extra never pulls in `google.adk`.
 
 ADK's own convention is for a function tool to return a plain dict (a
 non-dict return is auto-wrapped as `{"result": ...}`, which would bury
