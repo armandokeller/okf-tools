@@ -23,22 +23,22 @@ to an agent.
 
 ## Install
 
-Not yet released to PyPI. In the meantime, install directly from GitHub:
-
-```bash
-pip install git+https://github.com/armandokeller/okf-tools
-```
-
-Once released, the base package will have no agent-framework
-dependencies — add only the framework(s) you use. The PyPI distribution
-is named `okf-agent-tools` (`okf-tools` was taken by an unrelated,
-similarly-named project), but the importable module stays `okf_tools`:
+The base package has no agent-framework dependencies — add only the
+framework(s) you use. The PyPI distribution is named `okf-agent-tools`
+(`okf-tools` was taken by an unrelated, similarly-named project), but
+the importable module stays `okf_tools`:
 
 ```bash
 pip install okf-agent-tools                 # standalone use only
 pip install okf-agent-tools[langchain]      # + LangChain tools
 pip install okf-agent-tools[pydantic-ai]    # + PydanticAI tools
 pip install okf-agent-tools[adk]            # + Google ADK tools
+```
+
+To track `main` instead of the latest PyPI release:
+
+```bash
+pip install git+https://github.com/armandokeller/okf-tools
 ```
 
 See [Quickstart](quickstart.md) to get started, or the
